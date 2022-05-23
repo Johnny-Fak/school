@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+/* body {
+	background: beige;
+} */
+
+.stars {
+	position: absolute;
+	top: 49%;
+	left: 0%;
+	transform: translate(-50%) rotateY(180deg);
+	display: flex;
+    padding-right: 14rem;
+	
+	/* margin-top: 1rem; */
+    
+}
+.stars input {
+	display: none;
+}
+.stars label {
+	display: block;
+	cursor: pointer;
+	/* width: 150px; */
+}
+.stars label:before {
+	content: '★';
+	position: relative;
+	display: block;
+	font-size: 3rem;
+	color: black;
+}
+.stars label:after {
+	content: '★';
+	position: absolute;
+	display: flex;
+	font-size: 3rem;
+	color: #f39c12;
+	top: 0;
+	opacity: 0;
+	transition:all 1s;
+}
+.stars label:hover:after, .stars label:hover~label:after, .stars input:checked~label:after {
+	opacity: 1;
+}
+
+
